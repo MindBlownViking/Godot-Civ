@@ -122,9 +122,11 @@ Fine-tune Godot's settings for your game.
      - Set `Default Gravity` to `0` if no gravity-based mechanics.
 
 4. **Rendering Settings**:
-   - Go to `Rendering` > `Quality`:
-     - Ensure `2D` options are enabled.
+   - In Project Settings, go to `Rendering` > `2d`:
+     - You may only see **Snap Transforms to Pixel**; this is normal in Godot 4. Enable it if you want pixel-aligned positioning (useful for pixel-art projects).
+   - For anti-aliasing, go to `Rendering` > `Quality` > `Anti Aliasing`:
      - Set `MSAA` to `2x` or `4x` for smoother edges if needed.
+   - If you need to change the renderer, go to `Rendering` > `Renderer` and select the preferred rendering backend.
 
 5. **General Settings**:
    - Go to `General` > `Application`:
