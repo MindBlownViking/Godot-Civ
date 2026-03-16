@@ -4,8 +4,8 @@ This checklist outlines the key features and development steps for creating a ci
 
 ## Phase 1: Project Foundation (Highest Priority)
 - [x] Initialize Godot project with appropriate settings (2D, turn-based)
-- [ ] Set up version control (Git repository)
-- [ ] Create folder structure (scenes/, scripts/, assets/, ui/)
+- [x] Set up version control (Git repository)
+- [x] Create folder structure (scenes/, scripts/, assets/, ui/)
 - [ ] Configure project settings (input actions, physics, etc.)
 
 ## Phase 2: Core Gameplay Systems
