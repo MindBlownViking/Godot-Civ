@@ -10,7 +10,7 @@ This checklist outlines the key features and development steps for creating a ci
 
 ## Phase 2: Core Gameplay Systems
 ### Map and World Generation
-- [ ] Implement tile-based grid system
+- [x] Implement tile-based grid system
 - [ ] Procedural terrain generation (grassland, forest, mountains, water)
 - [ ] Resource placement (strategic resources like iron, horses)
 
