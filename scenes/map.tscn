@@ -1,0 +1,89 @@
+[gd_scene format=3 uid="uid://dpkmqyix2k51k"]
+
+[ext_resource type="Texture2D" uid="uid://de32v8o77boc7" path="res://assets/Coast-Tileset-Placeholder.png" id="1_blm8a"]
+[ext_resource type="Texture2D" uid="uid://tabmuh3yjl1j" path="res://assets/Desert-Tileset-Placeholder.png" id="2_mlgqr"]
+[ext_resource type="Texture2D" uid="uid://c3v283gir6bi1" path="res://assets/Forest-Tileset-Placeholder.png" id="3_wslke"]
+[ext_resource type="Texture2D" uid="uid://x2mfpj3lyhj7" path="res://assets/Hills-Tileset-Placeholder.png" id="4_gw3fx"]
+[ext_resource type="Texture2D" uid="uid://do3r5is0oum5u" path="res://assets/Mountain-Tileset-Placeholder.png" id="5_n1psn"]
+[ext_resource type="Texture2D" uid="uid://re2uinxfkff1" path="res://assets/Ocean-Tileset-Placeholder.png" id="6_c00ee"]
+[ext_resource type="Texture2D" uid="uid://d2nseljn120mn" path="res://assets/Plains-Tileset-Placeholder.png" id="7_p7tei"]
+[ext_resource type="Texture2D" uid="uid://vjs14e7is7ac" path="res://assets/Snow-Tileset-Placeholder.png" id="8_c70he"]
+[ext_resource type="Texture2D" uid="uid://ct3bwfgusc5ph" path="res://assets/Tundra-Tileset-Placeholder.png" id="9_mo32q"]
+[ext_resource type="Texture2D" uid="uid://b2hlbfryo5ymh" path="res://assets/Water-Tileset-Placeholder.png" id="10_6k6j1"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_m335s"]
+resource_name = "Coast"
+texture = ExtResource("1_blm8a")
+texture_region_size = Vector2i(32, 32)
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_sq6bu"]
+resource_name = "Desert"
+texture = ExtResource("2_mlgqr")
+texture_region_size = Vector2i(32, 32)
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4b7dj"]
+resource_name = "Forest"
+texture = ExtResource("3_wslke")
+texture_region_size = Vector2i(32, 32)
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_2cfcp"]
+resource_name = "Hills"
+texture = ExtResource("4_gw3fx")
+texture_region_size = Vector2i(32, 32)
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_y2ir2"]
+resource_name = "Mountain"
+texture = ExtResource("5_n1psn")
+texture_region_size = Vector2i(32, 32)
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5u2yt"]
+resource_name = "Ocean"
+texture = ExtResource("6_c00ee")
+texture_region_size = Vector2i(32, 32)
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_30iet"]
+resource_name = "Plains"
+texture = ExtResource("7_p7tei")
+texture_region_size = Vector2i(32, 32)
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_mkblt"]
+resource_name = "Snow"
+texture = ExtResource("8_c70he")
+texture_region_size = Vector2i(32, 32)
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4o3w1"]
+resource_name = "Tundra"
+texture = ExtResource("9_mo32q")
+texture_region_size = Vector2i(32, 32)
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_6ek7f"]
+resource_name = "Water"
+texture = ExtResource("10_6k6j1")
+texture_region_size = Vector2i(32, 32)
+0:0/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_hrmi8"]
+sources/0 = SubResource("TileSetAtlasSource_m335s")
+sources/1 = SubResource("TileSetAtlasSource_sq6bu")
+sources/2 = SubResource("TileSetAtlasSource_4b7dj")
+sources/3 = SubResource("TileSetAtlasSource_2cfcp")
+sources/4 = SubResource("TileSetAtlasSource_y2ir2")
+sources/5 = SubResource("TileSetAtlasSource_5u2yt")
+sources/6 = SubResource("TileSetAtlasSource_30iet")
+sources/7 = SubResource("TileSetAtlasSource_mkblt")
+sources/8 = SubResource("TileSetAtlasSource_4o3w1")
+sources/9 = SubResource("TileSetAtlasSource_6ek7f")
+
+[node name="MapRoot" type="Node2D" unique_id=817969678]
+
+[node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=937826327]
+tile_set = SubResource("TileSet_hrmi8")

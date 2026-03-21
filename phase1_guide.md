@@ -12,13 +12,13 @@ Your project is already initialized (you have `project.godot`), but let's ensure
 2. **Verify Project Settings**:
    - Go to `Project` > `Project Settings` in the top menu.
    - In the `General` tab, under `Display` > `Window`:
-     - Set `Mode` to `canvas_items` (for proper 2D scaling in Godot 4).
-     - Adjust `Size` to your desired resolution (e.g., 1920x1080 for fullscreen).
-     - Set `Stretch Mode` to `canvas_items` for proper scaling.
+	 - Set `Mode` to `canvas_items` (for proper 2D scaling in Godot 4).
+	 - Adjust `Size` to your desired resolution (e.g., 1920x1080 for fullscreen).
+	 - Set `Stretch Mode` to `canvas_items` for proper scaling.
 
 3. **Configure for Turn-Based Gameplay**:
    - In `Project Settings`, go to `General` > `Application` > `Run`:
-     - Set `Main Scene` to a placeholder scene (you'll create this later).
+	 - Set `Main Scene` to a placeholder scene (you'll create this later).
    - For turn-based mechanics, you'll implement turn logic in scripts later, but ensure the project is set to run at a consistent frame rate.
 
 4. **Save Settings**: Click `Close` to save changes.
@@ -38,23 +38,23 @@ Version control is essential for tracking changes and collaborating.
 3. **Create .gitignore File**:
    - Create a new file named `.gitignore` in the project root.
    - Add the following content (standard for Godot projects):
-     ```
-     # Godot-specific ignores
-     .import/
-     *.tmp
-     *.import
-     export_presets.cfg
+	 ```
+	 # Godot-specific ignores
+	 .import/
+	 *.tmp
+	 *.import
+	 export_presets.cfg
 
-     # OS-specific ignores
-     .DS_Store
-     Thumbs.db
+	 # OS-specific ignores
+	 .DS_Store
+	 Thumbs.db
 
-     # Editor-specific
-     .vscode/
-     .idea/
-     *.swp
-     *.swo
-     ```
+	 # Editor-specific
+	 .vscode/
+	 .idea/
+	 *.swp
+	 *.swo
+	 ```
 
 4. **Initial Commit**:
    ```

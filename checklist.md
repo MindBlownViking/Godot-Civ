@@ -13,7 +13,6 @@ This checklist outlines the key features and development steps for creating a ci
 - [ ] Implement tile-based grid system
 - [ ] Procedural terrain generation (grassland, forest, mountains, water)
 - [ ] Resource placement (strategic resources like iron, horses)
-- [ ] Fog of war system
 
 ### Basic Resource Management
 - [ ] Define core resources (Food, Production, Gold, Science, Culture)
@@ -48,6 +47,7 @@ This checklist outlines the key features and development steps for creating a ci
 - [ ] Time limit victory
 
 ## Phase 3: User Interface and UX
+- [ ] Fog of war system
 - [ ] Main Game HUD
   - [ ] Resource display
   - [ ] Turn counter

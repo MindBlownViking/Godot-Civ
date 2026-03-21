@@ -9,17 +9,42 @@ A tile-based map is the foundation of a Civ-like game.
 
 ### 1.1 Create a Tile Map Scene
 1. In Godot, create a new `Node2D` scene named `MapRoot`.
-2. Add a `TileMap` node as a child.
-3. Create a new `TileSet` resource and assign it to the TileMap’s `tile_set` property.
-4. Add placeholder tiles (e.g., grass, water, mountain) to the TileSet.
-5. Save the scene to `scenes/map.tscn`.
+2. Add a `TileMapLayer` node as a child.
+3. Create a new `TileSet` resource and assign it to the TileMapLayer’s `tile_set` property.
+   - In the Inspector, click the dropdown next to `Tile Set` and select "New TileSet".
+   - Double-click it to open the TileSet editor.
+   - Use an image editor (e.g., GIMP, Krita) to create small square images (32x32 pixels) filled with solid colors.
+   - Add placeholder tiles to the TileSet, such as:
+     - Grass (#228B22)
+     - Water (#0000FF)
+     - Mountain (#808080)
+     - Plains (#FFFF00)
+     - Desert (#FFA500)
+     - Forest (#006400)
+     - Hills (#8B4513)
+     - Tundra (#ADD8E6)
+     - Snow (#FFFFFF)
+     - Ocean (#000080)
+     - Coast (#87CEEB)
+     - Save as PNGs in the assets/ folder (e.g., `grass.png`, `water.png`).
+     - Import PNGs into Godot's FileSystem dock.
+   - In TileSet editor, add each as a texture and define tiles:
+     1. Click `Add Texture` (or the `+` icon) and select one placeholder PNG.
+     2. Choose `Atlas` (not `Scenes Collection`) for static tile images.
+     3. For single-tile PNGs, click the three dots, select `Create Tiles`, and confirm the non-transparent texture region (usually full 32x32 solid color).
+     4. For atlas images (grids), set tile region to 32x32 and click `Create Atlas` (or `Create Tile`).
+     5. Name the tile (e.g., Grass, Water, Mountain) for clarity.
+     6. Repeat for each placeholder PNG.
+     7. Leave occlusion/collision setup for Phase 3 (optionally add in Phase 3 when movement/blocking logic is complete).
+   - Save the TileSet (e.g., as `res://tileset.tres`).
+4. Save the scene to `scenes/map.tscn`.
 
 ### 1.2 Implement the Grid System
 1. In `scripts/`, create a new script `map_generator.gd`.
 2. Attach the script to `MapRoot` and add the following responsibilities:
    - Define map size (`width`, `height`).
    - Generate a 2D array to store tile types.
-   - Place tiles on the TileMap using `set_cell()`.
+   - Place tiles on the TileMapLayer using `set_cell()`.
 
 ### 1.3 Procedural Terrain Generation
 1. Implement a simple noise-based generator:
@@ -31,11 +56,6 @@ A tile-based map is the foundation of a Civ-like game.
 1. Define resource types in an enum (iron, horses, food, etc.).
 2. Place resources on eligible tiles during generation.
 3. Store resources in a parallel 2D array or a `ResourceCell` struct.
-
-### 1.5 Fog of War
-1. Add a `CanvasLayer` with a full-screen black `ColorRect` or `LightOccluder2D`.
-2. Track visibility per tile (visible, explored, hidden).
-3. Update visibility based on units’ sight range each turn.
 
 ---
 ## 2. Basic Resource Management
